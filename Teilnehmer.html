@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+    <head><meta charset="utf-8"></head>
+  <head>
+    <title>Meditation</title>
+    <link rel="stylesheet" href="global.css">
+  </head>
+<body>
+
+    <div class="topnav">
+        <a class="active" href="./Teilnehmer.html">Home</a>
+        <a href="Login.html" class="split">Login</a>
+      </div>
+      
+    <!-------------Tabelle Mitte-------------------------->
+    <table align = center valign = center >
+      
+<tr>
+<td>
+    <h2 style="text-align:center">Meditationsveranstaltung</h2>
+    <h2 style="text-align:center">in Hamburg, Deutschland</h2>
+
+
+<!------------------------Slides-Bilder------------------------->
+<div style="text-align:center">
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="Bilder/images14.jpg" style="width: 700px; height: 475px;">
+    </div>
+    
+    <div class="mySlides fade">
+        <img src="Bilder/images11.jpeg" style="width: 700px; height: 475px;">
+    </div>
+    
+    <div class="mySlides fade">
+        <img src="Bilder/images9.jpeg" style="width: 700px; height: 475px;" >
+    </div>
+    </div>
+    <br>
+<!--------------slides Show Funktion------------------------->
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+    
+  <script>
+    let slideIndex = 0;
+    showSlides();  
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+  </script>
+  </div>
+<!---------------Text Mitte--------------------->
+
+    <h2 style="text-align:center">Meditationscamp vom 02. bis 06. August 2023</h2>
+<!---------------Text und Bild--------------------->
+<br><br><br><br>
+
+      <div style="float:left;top:100px;width:20%;padding-right:50px;">
+        <img src="Bilder/images3.jpeg" alt="Bildbeschreibung" style="width:100%">
+      </div>
+      <div style=" position:relative;top:5px;left:20px;width:1000px;z-index:2;" >
+      <p>Die Sikh-Meditation: 
+        Es gibt verschiedene Arten von Sikh-Meditationen, die auf die Lehren der Gurus der Sikhs 
+        zurückgehen. Die Meditation kann dazu beitragen, Stress abzubauen, die Konzentration zu 
+        verbessern und das Wohlbefinden zu steigern. Darüber hinaus kann sie helfen, den Geist zu 
+        beruhigen und das Bewusstsein zu erweitern. Auch der Körper erfährt einen tiefen Zustand 
+        von Ruhe und tiefsitzenden Verspannungen werden gelöst.
+        Ein weiteres Ziel der Sikh Meditation ist die vollkommene Einheit mit Gott. 
+        
+        </p>
+    </div>
+  
+<!---------------Text und Bild-------------------->
+
+<!---------Tagesplan------------------------------->
+<p><h3 style=" position:relative;top:5px;left:150px;width:500px;z-index:2;">Tagesablauf</h3></p>
+<table border="5" height="500" width="800" bordercolor="blue" bgcolor="">
+  <tr>
+  <td colspan="2">05:00 - 07:00</td>
+  <td colspan="5">Morgengebet und Meditation</td>
+  </tr>
+  <tr>
+      <td colspan="2">07:00 - 10:00</td>
+      <td colspan="5">Frühstück, freiwillige Dienste, freie Zeit</td>
+  </tr>
+  <tr>
+      <td colspan="2">10:00 - 12:00</td>
+      <td colspan="5">Lobgesang, Interpretation der Schriften und Meditation</td>
+  <tr>
+      <td colspan="2">12:00 - 14:00</td>
+      <td colspan="5">Gemeinsames Essen, freiwillige Dienste und freie Zeit</td>
+  </tr>
+  <tr>
+  <td colspan="2">14:00 - 16:00</td>
+  <td colspan="5">Meditation</td>
+  </tr>
+  <tr>
+      <td colspan="2">16:00 - 17:00</td>
+      <td colspan="5">Tee und freie Zeit</td>
+      </tr>
+  
+  <tr>
+      <td colspan="2">17:00 - 20:00</td>
+      <td colspan="5">Abendgebet, Lobgesang, Interpretation der Schriften und Meditation</td>
+  </tr>
+  
+  <tr>
+      <td colspan="2">20:00 - 22:00</td>
+      <td colspan="5">Gemeinsames Essen, freiwillige Dienste und Freie Zeit</td>
+      </tr>
+  </table>
+
+</div></div>
+<br><br>
+
+<!--------------Anmeldungs-Formular----------------------->
+      <p><h3>Anmeldung notwendig!</h3></p>
+      <p><h3>Bitte füllen Sie das folgende Formular aus:</h3></p>
+     
+<form action="Teilnehmer.php" method="post">
+      <table style="width:70%;">
+        <tr>
+          <td>Vorname</td>
+          <td><input name="vorname" required></td>
+        </tr>
+        <tr>
+          <td>Nachname</td>
+          <td><input name="nachname" required></td>
+        </tr>
+        <tr>
+          <td>Geschlecht</td>
+          <td><input type="radio" name="geschlecht" value="Mann" checked="checked"> Mann 
+            <input type="radio" name="geschlecht" value="Frau" > Frau 
+          </td>
+        </tr>
+        <tr>
+          <td>Geburtsdatum</td>
+          <td><input type="date" name="geburtsdatum"></td>
+        </tr>
+        <tr>
+          <td>Stadt</td>
+          <td><input name="stadt" required></td>
+        </tr>
+        <tr>
+          <td>Land</td>
+          <td><input name="land" required></td>
+        </tr>
+        <tr>
+          <td>Telefon</td>
+          <td><input name="telefon" required></td>
+        </tr>
+        <tr>
+          <td>E-Mail</td>
+          <td><input type="email" name="email" required></td>
+        </tr>
+        <tr>
+          <td>Passwort</td>
+          <td><input name="passwort" required type="password"></td>
+        </tr>
+        <tr>
+          <td>Teilnehmeranzahl</td>
+          <td><input name="teilnehmeranzahl" required></td>
+        </tr> 
+    
+        <tr>
+          <p><td colspan="2"></p><br><br>
+            <h4>Reiseinfomation (Optional)</h4>
+            <p><i>(nur wenn Sie ein Shuttle service und/oder eine übernachtung brauchen)</i></p>
+          </td>
+        </tr>
+
+        <tr>
+        <td>Ankunftsort</td>
+       <td><select name="ankunftsort">   
+            <option value="Flughafen"> Flughafen </option> 
+            <option value="Hauptbahnhof">Hauptbahnhof</option> 
+        </select>        
+         </td>
+        </tr>
+   <!-- <tr>
+      <td>Ankunftsort</td>
+      <td><input name="ankunftsort"></td>
+    </tr>-->
+    <tr>
+      <td>Ankunftdatum</td>
+      <td><input type="date" name="ankunftsdatum" min="2023-08-01" max="2023-08-07"></td>
+    </tr>
+    <tr>
+      <td>Ankunftszeit</td>
+      <td><input name="ankunftszeit"></td>
+    </tr>
+    
+    <tr>
+      <td>Abfahrtsort</td>
+     <td><select name="abfahrtsort">   
+           <option value="Flughafen"> Flughafen </option> 
+          <option value="Hauptbahnhof">Hauptbahnhof</option> 
+      </select>
+      </td>
+      </tr>
+    <!--<tr>
+      <td>Abfahrtsort</td>
+      <td><input name="abfahrtsort"></td>
+    </tr> --->
+    
+    <tr>
+      <td>Ankunftdatum</td>
+      <td><input type="date" name="abfahrtsdatum" min="2023-08-02" max="2023-08-07"></td>
+    </tr>
+    <tr>
+      <td>Abfahrtszeit</td>
+      <td><input name="abfahrtszeit"></td>
+    </tr>
+    <tr>
+      <td>Anzahl der Nächten</td>
+      <td><input name="anzahlNaechten"></td>
+    </tr>
+  </table>
+
+<p><input type="submit">
+  <input type="reset">
+</p>       
+</form>
+
+
+</td></tr>
+</table>
+
+</body>
+</html>  
