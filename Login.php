@@ -32,7 +32,7 @@ $passwort = $_POST['passwort'];
 /*-- Hier Für Admin--------------*/
 if ($email == "admin@web.de") {
     
-    if ($passwort == "admin123") {
+    if ($passwort == "admin") {
 
 $sql = "select * from teilnehmer LEFT JOIN reiseinfo ON reiseinfo.teilnehmerID = teilnehmer.id;";
 $sqlFuerAnzahlTeilnehmer = "select sum(teilnehmeranzahl) as total from teilnehmer;";
